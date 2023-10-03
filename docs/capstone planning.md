@@ -1,12 +1,13 @@
 Definition Statement
 
--I want to build an application that US Active Duty Armed Forces and Eligible DOD contractors, civilian employees, foreign national hires, active military and retiree dependents particularly ones based in the Philippines and surrounding countries can use as a reference in guide in what they need for their US military ID card appointment at the US Embassy in Manila.
+-I want to build an application that US Active Duty Armed Forces and Eligible DOD contractors, civilian employees, foreign national hires, active military and retiree dependents particularly personnel based in the Philippines and neighboring countries can use as a reference and guide in what they need for their US military ID card appointment at the US Embassy in Manila.
 
 Define your Audience
 
 Who is using my application
 
-- US Active Duty Armed Forces and Eligible DOD contractors, civilian employees, foreign national hires, active military and retiree dependents particularly ones based in the Philippines and surrounding countries
+- US Active Duty Armed Forces and Eligible DOD contractors, civilian employees, foreign national hires, active military and retiree dependents based in the Philippines and other countries in South Pacific region
+
 Outline the content of the application
 
 What do I want on each page? (text / pics / images / navigation) & what do I want the functionality of each page to be?
@@ -30,7 +31,9 @@ What do I want on each page? (text / pics / images / navigation) & what do I wan
 -This page will list out some of the most frequently asked questions relevant to making ID card appointments and will also have a contact us page that allows customers to fill out a form and send feedback, suggestions and any other concerns related to military ID card appointments
 
 What is the purpose of my application?
+
 -My website will provide necessary information most commonly asked and requested by customers trying to get their military ID, This website will provide Information mainly on requirements for their military ID card appointment and provide requirements, important links to references, even images of required documents and other information relevant to military ID appointment
+
 What business problem or real world problem am I going to be solving?
 -The website is intended to ensure that the customers have all the necessary requirements they need so they successfully get issued their IDs on their appointments They need to have basic computer literacy ang have access to a computer or mobile device with internet connection to access the website
 
@@ -42,7 +45,9 @@ Images
 -Images of ID card types
 Fonts
 			-Arial
+
 Logos
+
 -Department of Defense and US Embassy logo
 
 Create and provide link to User Story Map in Mural
