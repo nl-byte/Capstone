@@ -5,7 +5,7 @@
 
 Define your Audience
 
-Who is using my application
+Who will be using my application
 
 - US Active Duty Armed Forces and Eligible DOD contractors, civilian employees, foreign national hires, active military and retiree dependents based in the Philippines and other countries in South Pacific region
 
@@ -38,49 +38,3 @@ What is the purpose of my application?
 What business problem or real world problem am I going to be solving?
 -The website is intended to ensure that the customers have all the necessary requirements they need so they successfully get issued their IDs on their appointments They need to have basic computer literacy ang have access to a computer or mobile device with internet connection to access the website
 
-Define the attributes of your website
-
-Color Palette
--17426f and FFFF
-Images
--Images of ID card types
-Fonts
-			-Arial
-
-Logos
-
--Department of Defense and US Embassy logo
-
-Create and provide link to User Story Map in Mural
-
--https://app.mural.co/t/savvycoders0766/m/savvycoders0766/1692926595769/efb71972725a235ea4cf6b24e9c34544719b6279?sender=u630cf68db90c258ff83f7468
-
-Research the following:
-List Applications Researched: (links to websites / applications)
--https://www.cac.mil/
--https://ph.usembassy.gov/dod-id-card/#procedures
--https://ph.usembassy.gov/events/category/holiday-schedule-2023/
--https://idco.dmdc.osd.mil/idco/
-
-List what you like about each site:
--the information listed
-
-List what you do not like about each site:
-
--the information isnt consolidated and is scattered, and isnt tailored to the specific needs of the target population in the area
-How my application will be different:
--all relevant information will be consolidated in one spot
-
-Create wireframes and provide link for each page (minimum of 4-5 pages) including Home, About Me, Contact Us and 1-2 other pages demonstrating the specific functionality of your capstone's purpose
-
-Home page:https://app.diagrams.net/#G1UYDsGaiIu019ct-yBgLKvaRaewqGt8b9
-Page2: https://app.diagrams.net/#G1rQfrAxWypZoGAS2bzVUAVCaJDq2FYo8G
-Page3:https://app.diagrams.net/?libs=general;flowchart#G1ugPAeg5ZFwyJGvoCy0hcfU0kzObO4fMU
-Page4:https://app.diagrams.net/#G1L6MsKopvd-IYOU4eSEv-orVkSdFV-JFI
-Page5: https://app.diagrams.net/#G1XYKxP9OpKGp-sTqNfZri1SdJbYSqHltN
-
-Create and provide link to User Flow Diagram
-https://app.mural.co/t/savvycoders0766/m/savvycoders0766/1692926595769/efb71972725a235ea4cf6b24e9c34544719b6279?sender=u630cf68db90c258ff83f7468
-
-Create and provide link to SWOT Analysis
-https://docs.google.com/document/d/122AacnpwGbKZiIaYtDsJYcXxp5gxJQRZzle_fRL5nDA/edit
