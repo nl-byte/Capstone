@@ -1,7 +1,7 @@
 import { Header, Nav, Main, Footer } from "./components";
 import * as store from "./store";
 import Navigo from "navigo";
-import capitalize from "lodash";
+import { capitalize } from "lodash";
 
 const router = new Navigo("/");
 
