@@ -1,4 +1,4 @@
 export default {
-  header: "CAC-Eligible personnel Requirements",
+  header: "CAC",
   view: "CAC"
 };

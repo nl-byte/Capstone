@@ -1,6 +1,5 @@
 import html from "html-literal";
 
 export default state => html`
-  <section id="USID">
-  </section>
+  <section id="USID"></section>
 `;
