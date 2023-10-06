@@ -13,28 +13,27 @@ function render(state = store.Home) {
     ${Footer()}
   `;
   afterRender();
-   router.updatePageLinks();
+  router.updatePageLinks();
 }
 
 function afterRender() {
-// add menu toggle to bars icon in nav bar
-document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-});
+  // add menu toggle to bars icon in nav bar
+  document.querySelector(".fa-bars").addEventListener("click", () => {
+    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+  });
 }
 
 router
-.on({
-  "/": () => render(),
-  ":view": (params) => {
-    let view = capitalize(params.data.view);
-    if (view in store) {
-      render(store[view]);
-    } else {
-      render(store.Viewnotfound);
-      console.log(`View ${view} not defined`);
+  .on({
+    "/": () => render(),
+    ":view": params => {
+      let view = capitalize(params.data.view);
+      if (view in store) {
+        render(store[view]);
+      } else {
+        render(store.Viewnotfound);
+        console.log(`View ${view} not defined`);
+      }
     }
-  },
-})
-.resolve();
-
+  })
+  .resolve();
