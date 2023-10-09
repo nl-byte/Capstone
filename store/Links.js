@@ -1,7 +1,7 @@
 export default [
-  { title: "CAC", text: "CAC" },
-  { title: "FAQ", text: "FAQ" },
+  { title: "Cac", text: "Cac" },
+  { title: "Faq", text: "Faq" },
   { title: "Home", text: "HOME" },
-  { title: "USID", text: "USID" },
+  { title: "Usid", text: "USID" },
   { title: "Info", text: "INFO" }
 ];
