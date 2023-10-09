@@ -46,3 +46,7 @@ nav a:hover {
 }
 
 
+nav > .fa-bars {
+  display: none;
+}
+

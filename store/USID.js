@@ -1,4 +1,4 @@
 export default {
-  header: "USID-eligible personnel Requirements",
-  view: "USID"
+  header: "Additional Information Page",
+  view: "Usid"
 };
