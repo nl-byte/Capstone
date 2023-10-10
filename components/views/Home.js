@@ -3,7 +3,6 @@ import html from "html-literal";
 export default state => html`
   <section id="Home Page">
     <div class="homepage"><h1>MANILA DOD-ID CARDS OFFICE - HELPDESK</h1></div>
-
   </section>
   <section id="homeboxes">
     <div id="boxstyle" class="homebox1">
@@ -38,5 +37,10 @@ export default state => html`
       </ul>
       <button>Continue</button>
     </div>
+    <h3>
+      The weather in ${state.weather.city} is ${state.weather.description}.
+      Temperature is ${state.weather.temp}F, and it feels like
+      ${state.weather.feelsLike}F.
+    </h3>
   </section>
 `;
