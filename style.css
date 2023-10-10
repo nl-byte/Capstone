@@ -50,3 +50,6 @@ nav > .fa-bars {
   display: none;
 }
 
+ul {
+  list-style-type: none;
+}
