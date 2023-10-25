@@ -1,4 +1,4 @@
 export default {
-  header: "Frequently Asked Questions Page",
+  header: "",
   view: "Faq"
 };

@@ -1,4 +1,4 @@
 export default {
-  header: "CAC",
+  header: "",
   view: "Cac"
 };

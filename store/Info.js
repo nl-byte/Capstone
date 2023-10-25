@@ -1,4 +1,4 @@
 export default {
-  header: "Additional Information Page",
+  header: "",
   view: "Info"
 };
