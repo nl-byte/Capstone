@@ -2,6 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import appt from "./routers/appt.js";
 
 // Initialize the Express application
 const app = express();
@@ -105,6 +106,7 @@ app.get("/weather/:city", (request, response) => {
   );
 });
 
+app.use("/appt", appt);
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
