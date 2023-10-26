@@ -13,11 +13,11 @@ function render(state = store.Home) {
     ${Main(state)}
     ${Footer()}
   `;
-  afterRender();
+  afterRender(state);
   router.updatePageLinks();
 }
 
-function afterRender() {
+function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
@@ -36,7 +36,7 @@ router.hooks({
       case "Home":
         axios
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=manila`
           )
           .then(response => {
             const kelvinToFahrenheit = kelvinTemp =>

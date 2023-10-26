@@ -3,5 +3,6 @@ export default [
   { title: "Nextgen", text: "Nextgen" },
   { title: "Faq", text: "Faq" },
   { title: "Home", text: "Home" },
-  { title: "Info", text: "Info" }
+  { title: "Info", text: "Info" },
+  { title: "Appointment", text: "Appointment" }
 ];
