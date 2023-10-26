@@ -32,6 +32,7 @@ router.hooks({
         : "Home";
 
     // Add a switch case statement to handle multiple routes
+    //testing
     switch (view) {
       case "Home":
         axios
