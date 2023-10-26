@@ -27,4 +27,4 @@ const appSchema = new mongoose.Schema({
 
 const Appointment = mongoose.model("Appointment", appSchema);
 
-export default App;
+export default Appointment;
