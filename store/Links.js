@@ -1,8 +1,8 @@
 export default [
-  { title: "Cac", text: "Cac" },
-  { title: "Nextgen", text: "Nextgen" },
-  { title: "Faq", text: "Faq" },
   { title: "Home", text: "Home" },
-  { title: "Info", text: "Info" },
-  { title: "Appointment", text: "Appointment" }
+  { title: "Dodid", text: "Dodid" },
+  { title: "Va", text: "Va" },
+  { title: "Contact", text: "Contact" },
+  { title: "Appointment", text: "Appointment" },
+  { title: "Que", text: "Que" }
 ];

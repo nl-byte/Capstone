@@ -1,4 +1,4 @@
 export default {
   header: "",
-  view: "Nextgen"
+  view: "Contact"
 };

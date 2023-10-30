@@ -1,4 +1,4 @@
 export default {
   header: "",
-  view: "Appointment"
+  view: "Va"
 };

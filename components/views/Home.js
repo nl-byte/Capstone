@@ -2,41 +2,53 @@ import html from "html-literal";
 
 export default state => html`
   <section id="Home Page">
-    <div class="homepage"><h1>Manila DODID Helpdesk</h1></div>
+<div class="homepage">
+  <h1>The Manila US Veterans Services Organization (MUSVSO)</h1>
   </section>
-  <p class="welcomemsg">
-  Active-duty Military Service Members, DOD Contractors, DOD/ Federal Civilian Employees, Military Retirees, Dependents, Eligible Family Members (EFM) Appointment/ Enrollment Renewal/ DEERS Updates </p>
-<div class = "container">
 
+  <h2>About Us</h2>
+
+  <p class="welcomemsg">  Manila US Veterans Services Organization (MUSVSO) is a woman and veteran owned organization founded in 2022,
+    aimed to provide inforamtion, resources, and benefits available to US veterans residing in the Philippines.
+    available for US
+   </p>
+
+  <h2>U.S. Veterans in the Philippines</h2>
+
+  <p class="welcomemsg">  Manila is home to the only Veterans Administration regional office outside the United States,
+    and the American Cemetery in Manila is the largest American military cemetery outside the United States.
+    More than four million Filipino-Americans live in the United States, and almost 300,000 U.S. citizens reside in the Philippines, including a large number of U.S. military veterans.
+   </p>
+
+   <h2>How We Help</h2>
+  <p class="welcomemsg"> We aim to consolidate and disperse US Veteran benefit information and resources and provide various services tailored to each veterans needs including:
+     military ID card Assistance/ Initial Issuance Assistance, VA Claims Assistance, US Military Burial Arrangement Assistance.
+  </p>
+
+  <h2>Become a MUSVSO member</h2>
+  <button type="submit">Sign Up</button>
+  </div>
+
+<div class = "container">
   <section class="homebox1">
-      <h3>ID Card Appointment Scheduler</h3>
+      <h3>DODID Cards Office Manila</h3>
       <ul>
-        <li>Procedures</li>
-        <li>Directions & Parking</li>
-        <li>Make an appointment</li>
+
       </ul>
       <button>Continue</button>
 </section>
 
   <section class="homebox2">
-      <h3>Common Access Card - CAC</h3>
+      <h3>Manila Veterans Affairs Regional Office</h3>
       <ul>
-        <li>Active Duty U.S. Military Service Members</li>
-        <li>
-          Department of Defense Contractors, Federal Employees, and Overseas
-          Hires
-        </li>
       </ul>
      <a href="Cac.js"><button>Continue</button></a>
 </section>
 
   <section class="homebox3">
-      <h3>Uniformed Services ID-USID Card</h3>
+      <h3>US Embassy US Citizen/ Veteran Services</h3>
       <ul>
-        <li>Us Military Retirees</li>
-        <li>US Military Disabled Veterans</li>
-        <li>US Military Dependents</li>
-        <li>Other US Eligible Family Members</li>
+
       </ul>
       <button>Continue</button>
     </section>
@@ -47,9 +59,6 @@ export default state => html`
       Temperature is ${state.weather.temp}F, and it feels like
       ${state.weather.feelsLike}F.
     </h3>
-    <div class = "container3">
-  <img src="https://www.mapquestapi.com/staticmap/v5/map?start=14.578200323908787,120.97765376605633|flag-end&locations=14.545053952461592,120.99224498345163&size=@2x&key=${process.env.MAPQUEST_MAP_API_KEY}" />
-</div>
 
 <footer>
   <p>created by NL 2023</p>

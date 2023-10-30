@@ -3,12 +3,12 @@ import Appointment from "../models/App.js";
 
 const router = Router();
 
-// Create pizza route
+// Create appointment route
 router.post("/", async (request, response) => {
   try {
-    const newPizza = new Appointment(request.body);
+    const newAppointment = new Appointment(request.body);
 
-    const data = await newPizza.save();
+    const data = await newAppointment.save();
 
     response.json(data);
   } catch (error) {
@@ -75,7 +75,9 @@ router.put("/:id", async (request, response) => {
           customer: body.customer,
           location: body.location,
           request: body.request,
-          category: body.category
+          category: body.category,
+          startDate: body.startDate,
+          endDate: body.endDate
         }
       },
       {
