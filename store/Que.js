@@ -1,4 +1,5 @@
 export default {
   header: "",
-  view: "Info"
+  view: "Que",
+  appt: []
 };

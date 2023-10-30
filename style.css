@@ -242,7 +242,75 @@ footer {
   font-weight: 600;
 }
 nav li {
-  display: inline;
+  display: table-cell;
   margin-right: 100px;
   word-spacing: 50px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.collapsible {
+  cursor: pointer;
+  color: black;
+}
+
+.content {
+  display: contents;
+  text-align: left;
+}
+
+.collapsible.active  {
+  display: block;
+}
+
+.container6 {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center text within the container */
+}
+input[type="text"], input[type="password"] {
+    width: 100%; /* Take full width of the container */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button {
+    background-color: purple;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+.container7 {
+  max-width: 350px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-align: center; /* Center text within the container */
+}
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%; /* Take full width of the container */
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+button {
+  background-color: purple;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
 }

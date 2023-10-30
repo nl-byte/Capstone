@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default () => html`
-<div class = "container3">
+<div class = "container4">
   <form id="appt" method="POST" action="">
     <h2>Create an Appointment</h2>
     <div>
@@ -59,7 +59,27 @@ export default () => html`
         value="both"
       />
       <label for="top3">both</label>
+      <div>
+      <label for="startDate">Start Date:</label>
+      <input
+        type="date"
+        name="startDate"
+        id="startDate"
+        required
+      />
+    </div>
+    <div>
+      <label for="endDate">End Date:</label>
+      <input
+        type="date"
+        name="endDate"
+        id="endDate"
+        required
+      />
+    </div>
 
     <input type="submit" name="submit" value="Submit Appointment Request" />
   </form>
+
+  <div class = "container4">
 `;

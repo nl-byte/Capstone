@@ -1,4 +1,4 @@
 export default {
   header: "",
-  view: "Faq"
+  view: "Dodid"
 };

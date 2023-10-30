@@ -4,8 +4,9 @@ import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
 
+console.log(store);
 const router = new Navigo("/");
-
+console.log("test");
 function render(state = store.Home) {
   document.querySelector("#root").innerHTML = `
     ${Header(state)}
@@ -22,6 +23,54 @@ function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+
+  if (state.view === "Que") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      // Create an empty array to hold the toppings
+      const request = [];
+
+      // Iterate over the toppings array
+
+      for (let input of inputList.request) {
+        // If the value of the checked attribute is true then add the value to the toppings array
+        if (input.checked) {
+          request.push(input.value);
+        }
+      }
+
+      // Create a request body object to send to the API
+      const requestData = {
+        customer: inputList.customer.value,
+        location: inputList.location.value,
+        request: inputList.request.value,
+        category: inputList.category.value,
+        startDate: inputList.category.value,
+        endDate: inputList.category.value
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new appointment
+        .post(`${process.env.APPOINTMENT_API_KEY}/appt`, requestData)
+        .then(response => {
+          //  Then push the new appt onto the Appointment state appt attribute, so it can be displayed in the Appointment list
+          store.Appointment.appt.push(response.data);
+          router.navigate("/Appointment");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({
@@ -32,12 +81,11 @@ router.hooks({
         : "Home";
 
     // Add a switch case statement to handle multiple routes
-    //testing
     switch (view) {
       case "Home":
         axios
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=manila`
+            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
           )
           .then(response => {
             const kelvinToFahrenheit = kelvinTemp =>
@@ -56,6 +104,19 @@ router.hooks({
             done();
           });
         break;
+      // Added in Lesson 7.1
+      case "Que":
+        axios
+          .get(`${process.env.APPOINTMENT_API_KEY}/appt`)
+          .then(response => {
+            store.Appointment.appt.push = response.data;
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
       default:
         done();
     }
@@ -69,7 +130,6 @@ router.hooks({
     render(store[view]);
   }
 });
-
 router
   .on({
     "/": () => render(),

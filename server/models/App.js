@@ -21,8 +21,16 @@ const appSchema = new mongoose.Schema({
     required: true,
     enum: ["CAC", "NEXTGEN", "BOTH"]
   },
-  accessibility: [String],
-  order: { type: mongoose.Schema.Types.ObjectId, ref: "Appointments" }
+  startDate: {
+    type: Date,
+    required: true
+  },
+  endDate: {
+    type: Date,
+    required: true,
+
+    order: { type: mongoose.Schema.Types.ObjectId, ref: "Appointments" }
+  }
 });
 
 const Appointment = mongoose.model("Appointment", appSchema);
