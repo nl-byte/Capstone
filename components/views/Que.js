@@ -14,13 +14,8 @@ export default state => html`
 
       ${state.appt
         .map(appointment => {
-          return `<tr><td>${appointment.customer}</td><td>${
-            appointment.location
-          }</td><td>${appointment.request}</td><td>${appointment.category.join(
-            " & "
-          )}</td><td>${appointment.startDate}</td><td>${
-            appointment.endDate
-          }</td></tr>`;
+          return `<tr><td>${appointment.customer}</td><td>${appointment.location}</td><td>${appointment.request}</td><td>${appointment.category}
+          </td><td>${appointment.startDate}</td><td>${appointment.endDate}</td></tr>`;
         })
         .join("")}
     </table>

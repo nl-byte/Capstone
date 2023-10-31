@@ -24,7 +24,7 @@ function afterRender(state) {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 
-  if (state.view === "Que") {
+  if (state.view === "Appointment") {
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
@@ -51,19 +51,19 @@ function afterRender(state) {
         location: inputList.location.value,
         request: inputList.request.value,
         category: inputList.category.value,
-        startDate: inputList.category.value,
-        endDate: inputList.category.value
+        startDate: inputList.startDate.value,
+        endDate: inputList.endDate.value
       };
       // Log the request body to the console
       console.log("request Body", requestData);
 
       axios
         // Make a POST request to the API to create a new appointment
-        .post(`${process.env.APPOINTMENT_API_KEY}/appt`, requestData)
+        .post(`${process.env.APPOINTMENT_API_URL}/appt`, requestData)
         .then(response => {
           //  Then push the new appt onto the Appointment state appt attribute, so it can be displayed in the Appointment list
-          store.Appointment.appt.push(response.data);
-          router.navigate("/Appointment");
+          store.Que.appt.push(response.data);
+          router.navigate("/Que");
         })
         // If there is an error log it to the console
         .catch(error => {
@@ -108,8 +108,9 @@ router.hooks({
       case "Que":
         axios
           .get(`${process.env.APPOINTMENT_API_KEY}/appt`)
-          .then(response => {
-            store.Appointment.appt.push = response.data;
+          .then(res => {
+            console.log(res.data);
+            store.Que.appt.push(res.data);
             done();
           })
           .catch(error => {

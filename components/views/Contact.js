@@ -22,7 +22,7 @@ export default state => html`
 </form>
 </div>
 <div class = "container3">
-  <img src="https://www.mapquestapi.com/staticmap/v5/map?start=14.578200323908787,120.97765376605633|flag-end&locations=14.545053952461592,120.99224498345163&size=@2x&key=${process.env.MAPQUEST_MAP_API_KEY}" />
+  <img src="https://www.mapquestapi.com/staticmap/v5/map?start=Embassy of the United States of America, 1201 Roxas Blvd, Ermita, Manila, 1000 Metro Manila, Philippines|flag-end&locations=Seafront, Roxas, U.S. Embassy, GXVR+FQP, Service Rd, Pasay, Metro Manila, Philippines&size=@2x&key=${process.env.MAPQUEST_MAP_API_KEY}" />
 </div>
   </section>
 `;

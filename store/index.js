@@ -4,4 +4,4 @@ export { default as Appointment } from "./Appointment";
 export { default as Dodid } from "./Dodid";
 export { default as Va } from "./Va";
 export { default as Contact } from "./Contact";
-export { default as Account } from "./Que";
+export { default as Que } from "./Que";

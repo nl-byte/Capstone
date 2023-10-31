@@ -107,7 +107,7 @@ p.welcomemsg {
 section {
 
 display: flexbox;
-background-color: rgb(111,41,97);
+background-color: ;
 margin: 10px;
 padding: 20px;
 font-size: 10px;
@@ -221,7 +221,7 @@ section.homebox2 {
   border: 15px solid rgb(111,41,97);
   padding: 50px;
   margin: 20px;
-  text-align: center;
+  text-align: left;
   align-items: ;
 }
 
@@ -275,22 +275,6 @@ nav li {
     border-radius: 5px;
     text-align: center; /* Center text within the container */
 }
-input[type="text"], input[type="password"] {
-    width: 100%; /* Take full width of the container */
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-button {
-    background-color: purple;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-
-}
 .container7 {
   max-width: 350px;
   margin: 100px auto;
@@ -299,13 +283,7 @@ button {
   border-radius: 20px;
   text-align: center; /* Center text within the container */
 }
-input[type="text"], input[type="email"], input[type="password"] {
-  width: 100%; /* Take full width of the container */
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+
 button {
   background-color: purple;
   color: #fff;
