@@ -14,12 +14,18 @@ const appSchema = new mongoose.Schema({
   request: {
     type: String,
     required: true,
-    enum: ["id card-renewal", "record update", "add a dependent"]
+    enum: ["dodidhelp", "vahelp", "both", "other"]
   },
   category: {
     type: String,
     required: true,
-    enum: ["CAC", "NEXTGEN", "BOTH"]
+    enum: [
+      "Active Duty",
+      "Contractor",
+      "Dependent",
+      "Disabled American Veteran",
+      "Other"
+    ]
   },
   startDate: {
     type: Date,
