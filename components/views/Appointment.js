@@ -39,10 +39,10 @@ export default () => html`
       <div>
       <label for="request">Request:</label>
         <select id="request" name="request">
-          <option value="renewal">id card renewal</option>
-          <option value="record update">record update</option>
-          <option value="both">both</option>
-          <option value="other">other</option>
+          <option value="dodidhelp">DODID Assistance</option>
+          <option value="vahelp">VA Assistance</option>
+          <option value="both">BOTH</option>
+          <option value="other">OTHER</option>
 </div>
 
       <div>

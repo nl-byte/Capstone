@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default state => html`
-  <section id="apptlist">
+  <section class="apptlist" id="apptlist">
     <table id="apptlists">
       <tr>
         <th>Customer</th>

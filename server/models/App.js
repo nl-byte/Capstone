@@ -14,7 +14,7 @@ const appSchema = new mongoose.Schema({
   request: {
     type: String,
     required: true,
-    enum: ["renewal", "record update", "both", "other"]
+    enum: ["dodidhelp", "vahelp", "both", "other"]
   },
   category: {
     type: String,

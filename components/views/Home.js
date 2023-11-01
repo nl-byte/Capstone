@@ -1,67 +1,91 @@
 import html from "html-literal";
 
 export default state => html`
-  <section id="Home Page">
-<div class="homepage">
-  <h1>The Manila US Veterans Services Organization (MUSVSO)</h1>
-  </section>
 
-  <h2>About Us</h2>
+<section id="manila">
+<ul>
+  <li>The Manila US Veterans</li>
+  <li>Services Organization</li>
+  <li>(MUSVO)</li>
+</ul>
+</p>
+</section>
 
-  <p class="welcomemsg">  Manila US Veterans Services Organization (MUSVSO) is a woman and veteran owned organization founded in 2022,
-    aimed to provide inforamtion, resources, and benefits available to US veterans residing in the Philippines.
-    available for US
-   </p>
-
-  <h2>U.S. Veterans in the Philippines</h2>
-
-  <p class="welcomemsg">  Manila is home to the only Veterans Administration regional office outside the United States,
-    and the American Cemetery in Manila is the largest American military cemetery outside the United States.
-    More than four million Filipino-Americans live in the United States, and almost 300,000 U.S. citizens reside in the Philippines, including a large number of U.S. military veterans.
-   </p>
-
-   <h2>How We Help</h2>
-  <p class="welcomemsg"> We aim to consolidate and disperse US Veteran benefit information and resources and provide various services tailored to each veterans needs including:
-     military ID card Assistance/ Initial Issuance Assistance, VA Claims Assistance, US Military Burial Arrangement Assistance.
-  </p>
-
-  <h2>Become a MUSVSO member</h2>
-  <button type="submit">Sign Up</button>
-  </div>
-
+<h1 id="categories">
+  <p>Categories:</p>
+</h1>
 <div class = "container">
-  <section class="homebox1">
+  <div class="box">
+  <a href="http://localhost:1234/Dodid">
+    <div class="icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+  </a>
+      <div class="Content">
       <h3>DODID Cards Office Manila</h3>
       <ul>
-
+        <li>Eligibility</li>
+        <li>Requirements</li>
+        <li>Appointment Scheduler</li>
       </ul>
-      <button>Continue</button>
-</section>
-
-  <section class="homebox2">
+</div>
+</div>
+<div class="box">
+<a href="http://localhost:1234/Va">
+    <div class="icon"><i class="fa fa-building" aria-hidden="true"></i></div>
+  </a>
+      <div class="Content">
       <h3>Manila Veterans Affairs Regional Office</h3>
+      <br>
       <ul>
+        <li>Services</li>
+        <li>Hours and Location</li>
+        <li>Appointment Scheduler</li>
       </ul>
-     <a href="Cac.js"><button>Continue</button></a>
-</section>
+      <br>
 
-  <section class="homebox3">
-      <h3>US Embassy US Citizen/ Veteran Services</h3>
+      </div>
+</div>
+<div class="box">
+<a href="https://localhost:1234/Appointment">
+    <div class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+  </a>
+      <div class="Content">
+      <h3>Make an Appointment</h3>
+      <br>
       <ul>
-
+        <li>Id Renewal Help</li>
+        <li>VA Services Help</li>
+        <li>Other concerns</li>
       </ul>
-      <button>Continue</button>
-    </section>
+      <br>
   </div>
-
-    <h3>
+</div>
+</div>
+<div class ="weather">
+  <h3>
       The weather in ${state.weather.city} is ${state.weather.description}.
       Temperature is ${state.weather.temp}F, and it feels like
       ${state.weather.feelsLike}F.
     </h3>
-
+</div>
 <footer>
-  <p>created by NL 2023</p>
+<div class="ftrcontct">
+  <div class="ftrcontact1 ftrcntctadress" style="color: black;"><div class="ftrcntct"
+  >Contact</div>
+  <span>Manila US Veterans Services Organization
+  3201 Landover St,
+  Alexandria, VA 22305</span></div>
+  <div class="ftrcontcttel ftrcntctadress" style="color: black;">
+  <span>Tel 123-456-7890</span>
+  <span>Email MUSVSO@mysite.com</span>
+</div>
+<div class="ftrcontctnwsltr">
+  <span class="ftrcntctadress" style="color: black;">Subscribe to my Newsletter</span>
+  <div class="ftrcntcteadress">
+    <div class="ftrcntcteadress2" style="border-color: black; color: black;">
+    <span class="ftrcntctadress">Enter your email here*</span>
+  </div>
+  <div class="ftrcntcteadress3" >Join</div></div></div></div>
+
 </footer>
   </section>
 
