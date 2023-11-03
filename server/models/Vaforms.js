@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const appVaforms = new mongoose.Schema({
+const formSchema = new mongoose.Schema({
   form_name: {
     type: String,
     required: true,
@@ -143,6 +143,6 @@ const appVaforms = new mongoose.Schema({
   ]
 });
 
-const Forms = mongoose.model("Forms", appVaforms);
+const Forms = mongoose.model("Forms", formSchema);
 
 export default Forms;

@@ -120,6 +120,7 @@ button {
 
 }
 
+
 #categories {
   font-size: xxx-large;
   text-align: center;
@@ -169,15 +170,6 @@ nav ul li a {
 
 nav > .fa-bars {
   display: none;
-}
-
-
-label.logo{
-  color: white;
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
 }
 
 h1 {
