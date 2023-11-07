@@ -1,12 +1,18 @@
 import html from "html-literal";
 
 export default state => html`
-  <h1 id="dodid">The DOD(Department of Defense) ID Cards Office in Manila</h1>
-  <ul class="accordion">
-    <li>
-      <input type="radio" name="accordion" id="fifth" checked />
-      <label for="first">Eligible Personnel</label>
-      <div class="content">
+
+  <div class="accordion2">
+      <div>
+        <input
+          type="checkbox"
+          name="example"
+          id="section1"
+          class="accordion2_input"
+          class="hidecheckbox"
+        />
+        <label for="eligible_personnel" class="accordion2_label">Eligible Personnel</label>
+        <div class="accordion2_content">
         <p>
           Active-duty Military Service Members, DOD Contractors, DOD/ Federal
           Civilian Employees, Military Retirees, Dependents, Eligible Family
@@ -15,16 +21,21 @@ export default state => html`
           <a href="https://www.cac.mil/">https://www.cac.mil/</a> for more
           information.
         </p>
+          </p>
+        </div>
       </div>
-    </li>
-  </ul>
-  <ul class="accordion">
-    <li>
-      <input type="radio" name="accordion" id="six" checked />
-      <label for="first"
-        >Making an Appointment With the Manila DODID Office</label
-      >
-      <div class="content">
+      <div class="accordion2">
+      <div>
+        <input
+          type="checkbox"
+          name="example"
+          id="section1"
+          class="accordion2_input"
+          class="hidecheckbox"
+        />
+      <label for="howtomakeappt" class="accordion2_label">How to Make an Appointment</label>
+        <div class="accordion2_content">
+        <p>
         <ol>
           <li>
             Visit
@@ -55,16 +66,22 @@ export default state => html`
           >
           for the List of Holidays.**
         </ol>
+        <p>
+        </div>
       </div>
-    </li>
-  </ul>
-  <ul class="accordion">
-    <li>
-      <input type="radio" name="accordion" id="first" checked />
-      <label for="first">Required Documents</label>
-      <div class="content">
-        <h5>CAC Requirements:</h5>
-        <ul>
+      <div class="accordion2">
+      <div>
+        <input
+          type="checkbox"
+          name="example"
+          id="section1"
+          class="accordion2_input"
+          class="hidecheckbox"
+        />
+        <label for="section1" class="accordion2_label">CAC Requirements</label>
+        <div class="accordion2_content">
+          <p>
+          <ul>
           <li>
             Three (3) forms of valid picture ID, example: passport, ID with
             photo, Social Security card, driver’s license. The third ID will be
@@ -76,6 +93,20 @@ export default state => html`
             show start and end dates and confirmation email from your agent.
           </li>
         </ul>
+          </p>
+        </div>
+      </div>
+      <div class="accordion2">
+      <div>
+        <input
+          type="checkbox"
+          name="example"
+          id="section1"
+          class="accordion2_input"
+          class="hidecheckbox"
+        />
+        <label for="section1" class="accordion2_label">DODID Requirements</label>
+        <div class="accordion2_content">
         <h5>USID Requirements:</h5>
         <ul>
           <li>
@@ -117,7 +148,6 @@ export default state => html`
             Certificate.
           </li>
         </ul>
+        </div>
       </div>
-    </li>
-  </ul>
 `;
