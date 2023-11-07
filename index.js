@@ -118,6 +118,37 @@ router.hooks({
             done();
           });
         break;
+      case "Va":
+        axios
+          .get(`${process.env.VA_FORMS_API_KEY}`)
+          .then(res => {
+            const statusCode = res.status;
+            console.log(`VA Forms index response, code ${statusCode}`);
+
+            if (statusCode === 200) {
+              console.log(res.data);
+              store.Que.appt.push(res.data);
+            }
+
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            const statusCode = error.response ? error.response.status : null;
+
+            if (statusCode === 401) {
+              console.log("Authorization information not provided");
+            } else if (statusCode === 403) {
+              console.log("Invalid authorization");
+            } else if (statusCode === 413) {
+              console.log("Payload too large");
+            } else if (statusCode === 429) {
+              console.log("Too many requests");
+            }
+
+            done();
+          });
+        break;
       default:
         done();
     }
