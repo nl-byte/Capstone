@@ -1,4 +1,5 @@
 import html from "html-literal";
+import { Va } from "../../store";
 
 export default state => html`
   <h1>The Manila Veterans Affairs Regional Office</h1>
@@ -85,14 +86,33 @@ export default state => html`
   </div>
 
   <div class="va-form">
+    <form>
     <label class="required" for="va-form-input"
       >Search for a VA form by keyword, form name, or form number.</label
     ><br />
-    <input id="va-form-input" value="" size="20" /><br />
+    <input id="va-form-input" name ="vaforminput" value="" size="20" /><br />
     <span id="va-form" class="error_message"></span>
-    <button id="search-button" class="button" type="button" size="10">
+    <button id="search-button" class="button" type="submit" size="10">
       Search
     </button>
     <br />
+</form>
   </div>
+  <section class="formlist" id="formlist">
+    <table id="vaformtable">
+      <tr>
+        <th>Form Name</th>
+        <th>Form Url</th>
+        <th>Form Id</th>
+        <th>Form Type</th>
+      </tr>
+
+      ${state.vaform
+        .map(vaformtable => {
+          return `<tr><td>${vaformtable.Form_name}</td><td>${vaformtable.url}</td><td>${vaformtable.id}</td><td>${vaformtable.type}
+          </td>`;
+        })
+        .join("")}
+    </table>
+  </section>
 `;
