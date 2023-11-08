@@ -63,7 +63,6 @@ router.delete("/:id", async (request, response) => {
   }
 });
 
-// Update a single pizza by ID
 router.put("/:id", async (request, response) => {
   try {
     const body = request.body;

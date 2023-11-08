@@ -73,11 +73,12 @@ export default state => html`
   >Contact</div>
   <span>Manila US Veterans Services Organization
   3201 Landover St,
-  Alexandria, VA 22305</span></div>
+  Alexandria, VA 22305
+  contact@musvso.com
+</span></div>
   <div class="ftrcontcttel ftrcntctadress" style="color: black;">
-  <span>Telephone number:</span>
-  <span>123-456-7890</span>
-  <span>Email: contact@musvso.com</span>
+  <span>Created by: Nichole Lawas
+  lawasnichole.nl@gmail.com</span>
 </div>
   <div class="ftrcntcteadress3" >Join</div></div></div></div>
 

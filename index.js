@@ -44,7 +44,6 @@ function afterRender(state) {
           request.push(input.value);
         }
       }
-
       // Create a request body object to send to the API
       const requestData = {
         customer: inputList.customer.value,
@@ -68,6 +67,51 @@ function afterRender(state) {
         // If there is an error log it to the console
         .catch(error => {
           console.log("It puked", error);
+        });
+    });
+  }
+
+  if (state.view === "Va") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+      axios
+        .get(
+          `${process.env.VA_FORMS_API_URL}?query=${inputList.vaforminput.value}`,
+          {
+            headers: {
+              apikey: process.env.VA_FORMS_API_KEY
+            }
+          }
+        )
+        .then(res => {
+          const statusCode = res.status;
+          console.log(`VA Forms index response, code ${statusCode}`);
+          if (statusCode === 200) {
+            console.log(res.data);
+            store.Va.vaform = res.data.data.map(form => form.attributes);
+            router.navigate("/Va");
+          }
+          console.log(store.Va.vaform);
+        })
+
+        .catch(error => {
+          console.log("It puked", error);
+          const statusCode = error.response ? error.response.status : null;
+
+          if (statusCode === 401) {
+            console.log("Authorization information not provided");
+          } else if (statusCode === 403) {
+            console.log("Invalid authorization");
+          } else if (statusCode === 413) {
+            console.log("Payload too large");
+          } else if (statusCode === 429) {
+            console.log("Too many requests");
+          }
         });
     });
   }
@@ -107,10 +151,10 @@ router.hooks({
       // Added in Lesson 7.1
       case "Que":
         axios
-          .get(`${process.env.APPOINTMENT_API_KEY}/appt`)
+          .get(`${process.env.APPOINTMENT_API_URL}/appt`)
           .then(res => {
             console.log(res.data);
-            store.Que.appt.push(res.data);
+            store.Que.appt = res.data;
             done();
           })
           .catch(error => {
@@ -118,37 +162,7 @@ router.hooks({
             done();
           });
         break;
-      case "Va":
-        axios
-          .get(`${process.env.VA_FORMS_API_KEY}`)
-          .then(res => {
-            const statusCode = res.status;
-            console.log(`VA Forms index response, code ${statusCode}`);
 
-            if (statusCode === 200) {
-              console.log(res.data);
-              store.Que.appt.push(res.data);
-            }
-
-            done();
-          })
-          .catch(error => {
-            console.log("It puked", error);
-            const statusCode = error.response ? error.response.status : null;
-
-            if (statusCode === 401) {
-              console.log("Authorization information not provided");
-            } else if (statusCode === 403) {
-              console.log("Invalid authorization");
-            } else if (statusCode === 413) {
-              console.log("Payload too large");
-            } else if (statusCode === 429) {
-              console.log("Too many requests");
-            }
-
-            done();
-          });
-        break;
       default:
         done();
     }
