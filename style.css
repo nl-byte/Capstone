@@ -8,12 +8,14 @@ body {
 
 }
 /* home */
+
 .container {
 
   position: relative;
   width: 1200px;
   height: 300px;
   margin: 50px auto;
+  background-color: white;
 
 }
 
@@ -28,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 .container .box {
 
@@ -361,7 +362,7 @@ input[type="radio"]{
 }
 
 
-.accordion input[type="radio"]:checked + label + .content {
+.accordion input[type="checkbox"]:checked + label + .content {
   max-height: 5000px;
   padding: 10px 10px 20px;
 
@@ -484,6 +485,7 @@ input[type=submit] {
   border-radius: 10px;
   overflow: hidden;
   background-color: rgb(111,41,97);
+  font-size: large;
 
 }
 
@@ -511,7 +513,7 @@ display: none;
 }
 
 .accordion2_label::after {
-  content:  "+";
+  content:  "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -530,6 +532,11 @@ display: none;
   display: none;
 }
 
+.accordion2_input {
+
+  display: none;
+
+}
 .accordion2_input:checked ~ .accordion2_content {
   display: block;
 }
@@ -538,14 +545,7 @@ display: none;
   transform: translateY(-50%) rotate(0.5turn);
 }
 
-.hidecheckbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: polygon(0 0, 0 0, 0 0);
-  white-space: nowrap;
-  border: 0;
+#valocator {
+  text-align: left;
+  text-decoration: underline;
 }

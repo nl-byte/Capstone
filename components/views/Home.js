@@ -71,12 +71,15 @@ export default state => html`
 <div class="ftrcontct">
   <div class="ftrcontact1 ftrcntctadress" style="color: black;"><div class="ftrcntct"
   >Contact</div>
-  <span>Manila US Veterans Services Organization
-  3201 Landover St,
-  Alexandria, VA 22305
-  contact@musvso.com
+  <br>
+  <span>
+    Manila US Veterans
+    Services Organization
+    contact@musvso.com
 </span></div>
   <div class="ftrcontcttel ftrcntctadress" style="color: black;">
+  <br>
+  <br>
   <span>Created by: Nichole Lawas
   lawasnichole.nl@gmail.com</span>
 </div>
