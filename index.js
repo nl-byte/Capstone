@@ -148,7 +148,7 @@ router.hooks({
             done();
           });
         break;
-      // Added in Lesson 7.1
+
       case "Que":
         axios
           .get(`${process.env.APPOINTMENT_API_URL}/appt`)
