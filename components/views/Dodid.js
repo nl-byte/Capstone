@@ -7,11 +7,10 @@ export default state => html`
         <input
           type="checkbox"
           name="example"
-          id="section1"
+          id="section8"
           class="accordion2_input"
-          class="hidecheckbox"
         />
-        <label for="eligible_personnel" class="accordion2_label">Eligible Personnel</label>
+        <label for="section8" class="accordion2_label">Eligible Personnel</label>
         <div class="accordion2_content">
         <p>
           Active-duty Military Service Members, DOD Contractors, DOD/ Federal
@@ -29,11 +28,11 @@ export default state => html`
         <input
           type="checkbox"
           name="example"
-          id="section1"
+          id="section7"
           class="accordion2_input"
           class="hidecheckbox"
         />
-      <label for="howtomakeappt" class="accordion2_label">How to Make an Appointment</label>
+      <label for="section7" class="accordion2_label">How to Make an Appointment</label>
         <div class="accordion2_content">
         <p>
         <ol>
@@ -74,11 +73,10 @@ export default state => html`
         <input
           type="checkbox"
           name="example"
-          id="section1"
+          id="section6"
           class="accordion2_input"
-          class="hidecheckbox"
         />
-        <label for="section1" class="accordion2_label">CAC Requirements</label>
+        <label for="section6" class="accordion2_label">CAC Requirements</label>
         <div class="accordion2_content">
           <p>
           <ul>
@@ -101,11 +99,10 @@ export default state => html`
         <input
           type="checkbox"
           name="example"
-          id="section1"
+          id="section5"
           class="accordion2_input"
-          class="hidecheckbox"
         />
-        <label for="section1" class="accordion2_label">DODID Requirements</label>
+        <label for="section5" class="accordion2_label">DODID Requirements</label>
         <div class="accordion2_content">
         <h5>USID Requirements:</h5>
         <ul>

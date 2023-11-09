@@ -9,7 +9,6 @@ export default state => html`
       alt=""
     />
   </div>
-
   <div class="accordion2">
     <div>
       <input
@@ -17,18 +16,22 @@ export default state => html`
         name="example"
         id="section1"
         class="accordion2_input"
-        class="hidecheckbox"
       />
-      <label for="section1" class="accordion2_label"
-        >VA’s Manila Regional Office</label
-      >
+      <label for="section1" class="accordion2_label">VA’s Manila Regional Office</label>
       <div class="accordion2_content">
         <p>
           VA’s Manila Regional Office (RO) administers a variety of services,
           including Compensation, Education, Insurance, Pension, and Veteran
-          Readiness and Employment for Veterans, Servicemembers, their families
-          and survivors in the Philippines.
-        </p>
+          Readiness and Employment for Veterans, Service members, their families
+          and survivors in the Philippines. Some of the additional services include:
+          </p>
+         <ul>
+          <li>Counseling about eligibility for VA benefits and how to apply</li>
+          <li>Information about VA health care and memorial benefits</li>
+          <li> Outreach to Veterans, including those who are homeless or at risk for homelessness and older, minority, and women Veterans </li>
+          <li>Public affairs</li>
+          </ul>
+        <p>Visit: <a href="https://www.benefits.va.gov/ROMANILA/services-offered.asp">https://www.benefits.va.gov/ROMANILA/services-offered.asp</a> for more information</p>
       </div>
     </div>
     <div>
@@ -44,75 +47,69 @@ export default state => html`
         <ul>
           <p>
             VA Manila Regional Office is open for appointments Monday to
-            Friday,8:00 a.m. to 3:00 p.m. for the following services:
+            Friday,8:00 a.m. to 3:00 p.m.
+
+            Located at:
+
+            U S Embassy Seafront Compound
+            Address: 1501 Roxas Blvd, Pasay,
+            1302 Metro Manila, Philippines
+
+            Phone numbers:
+
+            Metro Manila Trunk Line: (+632) 8550-3888
+            Outside Metro Manila toll-free number: 1-800-1888-5252
+            Fax Number: (+632) 8550-3944
+            If you are in the Philippines, you can now contact VA MANILA via the Domestic Toll Free Number #myVA (#6982)
           </p>
-          <ul>
+</div>
+</div>
+<div>
+    <input
+        type="checkbox"
+        name="example"
+        id="section14"
+        class="accordion2_input"
+      />
+      <label for="section14" class="accordion2_label">MUSVSO Site VA Services:</label>
+      <div class="accordion2_content">
+        <ul>
 
-          <li>Phone/Video Interview</li>
-          <li>Interview Document Drop-off</li>
-          <li> In-Person Interview (limited slots) </li>
-        </ul>
-          <p>How to Contact VA Manila or Submit Your Documents:</p>
+          <p>
 
-          <ol>
-          <li>Create a Login.gov account</li>
-          for a seamless sign-in experience to VA.gov, My HealtheVet, and VA’s
-          Health and Benefits mobile app. Veterans can now use the same login
-          and password to access a growing list of federal government websites,
-          including the VA, Office of Personnel Management, and Small Business
-          Administration, to deliver a secure and streamlined identity
-          verification experience. Visitors seeking assistance from the Public
-          Contact Team at the Manila Regional Office are encouraged to schedule
-          a virtual or in-person appointment on the Visitor Engagement Reporting
-          Application (VERA) as walk-ins are not allowed. VERA is a self-service
-          portal which allows visitors to schedule, reschedule, and cancel
-          appointments. Please click or use the camera on your smartphone to
-          capture the blue QR Code to schedule an in-person appointment or the
-          black QR Code for a virtual appointment. You will receive email
-          confirmation of your appointment.
-        </ul>
-      </div>
-      <div>
-        <input
-          type="checkbox"
-          name="example"
-          id="section3"
-          class="accordion2_input"
-          class="hidecheckbox"
-        />
-        <label for="section3" class="accordion2_label">Section3</label>
-      </div>
-    </div>
-  </div>
-
-  <div class="va-form">
+<div id="vaformsearchbox">
     <form>
     <label class="required" for="va-form-input"
-      >Search for a VA form by keyword, form name, or form number.</label
-    ><br />
+      ></label
+    ><br /> <h3 id="valocator">Va Form Locator</h3>
+    <p>Search for a VA form by keyword, form name, or form number.</p>
     <input id="va-form-input" name ="vaforminput" value="" size="20" /><br />
     <span id="va-form" class="error_message"></span>
+    <br>
     <button id="search-button" class="button" type="submit" size="10">
       Search
     </button>
     <br />
 </form>
-  </div>
+
   <section class="formlist" id="formlist">
     <table id="vaformtable">
       <tr>
         <th>Form Name</th>
         <th>Form Url</th>
-        <th>Form Id</th>
-        <th>Form Type</th>
       </tr>
-
       ${state.vaform
         .map(vaformtable => {
-          return `<tr><td>${vaformtable.Form_name}</td><td>${vaformtable.url}</td><td>${vaformtable.id}</td><td>${vaformtable.type}
-          </td>`;
+          return `<tr><td>${vaformtable.form_name}</td><td>${vaformtable.url}</td>
+          </td></tr>`;
         })
         .join("")}
     </table>
   </section>
+          </p>
+          <h3 id="valocator">Va Facility Locator </h3>
+          <p>(coming soon)</p>
+</div>
+</div>
+</div>
 `;
