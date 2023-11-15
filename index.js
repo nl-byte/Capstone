@@ -19,32 +19,23 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-  // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 
   if (state.view === "Appointment") {
-    // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
 
-      // Get the form element
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
-
-      // Create an empty array to hold the toppings
       const request = [];
 
-      // Iterate over the toppings array
-
       for (let input of inputList.request) {
-        // If the value of the checked attribute is true then add the value to the toppings array
         if (input.checked) {
           request.push(input.value);
         }
       }
-      // Create a request body object to send to the API
       const requestData = {
         customer: inputList.customer.value,
         location: inputList.location.value,
@@ -53,18 +44,15 @@ function afterRender(state) {
         startDate: inputList.startDate.value,
         endDate: inputList.endDate.value
       };
-      // Log the request body to the console
       console.log("request Body", requestData);
 
       axios
-        // Make a POST request to the API to create a new appointment
+
         .post(`${process.env.APPOINTMENT_API_URL}/appt`, requestData)
         .then(response => {
-          //  Then push the new appt onto the Appointment state appt attribute, so it can be displayed in the Appointment list
-          store.Que.appt.push(response.data);
+          store.Appointment.appt.push(response.data);
           router.navigate("/Que");
         })
-        // If there is an error log it to the console
         .catch(error => {
           console.log("It puked", error);
         });
@@ -72,11 +60,9 @@ function afterRender(state) {
   }
 
   if (state.view === "Va") {
-    // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
 
-      // Get the form element
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
       axios
@@ -93,12 +79,24 @@ function afterRender(state) {
           console.log(`VA Forms index response, code ${statusCode}`);
           if (statusCode === 200) {
             console.log(res.data);
-            store.Va.vaform = res.data.data.map(form => form.attributes);
+            if (res.data && res.data.data && res.data.data.length > 0) {
+              store.Va.vaform = res.data.data.map(form => {
+                return {
+                  ...form.attributes,
+                  clickableLink: `<a href="${form.attributes.link}">${form.attributes.name}</a>`
+                };
+              });
+            } else {
+              store.Va.vaform = [];
+              const errorMessage =
+                "Sorry, no results found. Please ensure you’re using a valid search term.";
+
+              store.Va.vaform.push({ errorMessage });
+            }
             router.navigate("/Va");
           }
           console.log(store.Va.vaform);
         })
-
         .catch(error => {
           console.log("It puked", error);
           const statusCode = error.response ? error.response.status : null;

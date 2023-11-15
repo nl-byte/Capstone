@@ -16,7 +16,7 @@ export default state => html`
 </h1>
 <div class = "container">
   <div class="box">
-  <a href="https://nlcapstone.netlify.app/Dodid">
+  <a href="./Dodid">
     <div class="icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
   </a>
       <div class="Content">
@@ -29,7 +29,7 @@ export default state => html`
 </div>
 </div>
 <div class="box">
-<a href="https://nlcapstone.netlify.app/Va">
+<a href="./Va">
     <div class="icon"><i class="fa fa-building" aria-hidden="true"></i></div>
   </a>
       <div class="Content">
@@ -45,7 +45,7 @@ export default state => html`
       </div>
 </div>
 <div class="box">
-<a href="https://nlcapstone.netlify.app/Appointment">
+<a href="./Appointment">
     <div class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
   </a>
       <div class="Content">
